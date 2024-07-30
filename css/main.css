@@ -12,7 +12,9 @@
     background: #fff;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
-    transform: rotate(180deg); }
+    transform: rotate(180deg);
+    color: #ac9659;
+  }
     .menu-btn.close .btn-line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px); }
     .menu-btn.close .btn-line:nth-child(2) {
@@ -36,18 +38,18 @@
     float: left;
     width: 50%;
     height: 100vh;
-    overflow: hidden; }
+    overflow: unset; }
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #E73118;
+    background: #ac9659;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #eaf0c9;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -55,7 +57,8 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("../img/Jani.jpg");
+      background: url("../img/my pi_c.png");
+      background-attachment: fixed;
       border-radius: 50%;
       border: solid 0px #D74238; }
   .menu .nav-item {
@@ -64,7 +67,7 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #444; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -76,7 +79,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: chartreuse;
+      color: #444;
         transform: scale(1.25)
 }
 
@@ -95,6 +98,25 @@
 * {
   box-sizing: border-box; }
 
+.fa-linkedin:before {
+  content: "\f08c";
+  opacity: 75%;
+}
+.fa-github:before {
+  content: "\f09b";
+  opacity: 75%;
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+  opacity: 75%;
+}
+
+.fa-hackerrank:before {
+  content: "\f5f7";
+  opacity: 75%;
+}
+
 body {
   background: #444;
   color: #fff;
@@ -102,10 +124,12 @@ body {
   pedding: 0;
   text-align: center;
   margin: 0;
-  font-family: 'Fondamento', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-family: "Rubik Mono One", monospace;
+  font-style: normal;
   line-height: 2; }
   body#bg-img {
-    background: url("../img/back2.jpg");
+    background: url("../img/_MG_3590.jpg");
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -121,19 +145,30 @@ body {
 h1,
 h2,
 h3 {
-  margin: 0;
+  margin: -30px;
   font-weight: 400; }
-  h1.lg-heading,
-  h2.lg-heading,
+  h1.lg-heading  {
+    font-size: 6rem;
+  }
+  h2.lg-heading {
+    font-size: 2rem;
+  }
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 6rem;
+  }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     padding: 0.2rem 1rem;
     background: rgba(73, 73, 73, 0.5); }
-
+  .lg-heading{
+    color: #eaf0c9;
+  }
+  h2.sm-heading {
+    margin-top: -3rem;
+    opacity: 75%;
+  }
 a {
   color: #fff;
   text-decoration: none; }
@@ -144,38 +179,48 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #D74238; }
+  color: #ac9659; }
 
 main {
-  padding: 4rem;
+  padding: 2rem 4rem 4rem 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #ac9659;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
-      margin-top: 20vh; }
+      margin-top: 25vh; }
 
 .about-info {
-
   display: grid;
   grid-gap: 30px;
   grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
-
+    background: url("../img/My picopy.jpg");
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
    }
+  /* Add spacing between headings and paragraphs */
+  h1, h2, h3, h4, h5, h6, p {
+    margin-top: 1rem;
+    opacity: 75%;
+    margin-bottom: 1rem; /* Adjust as needed */
+  }
+
+  /* Add spacing between sections or divs */
+  div {
+    margin-bottom: 2rem; /* Adjust as needed */
+  }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 0rem; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -183,11 +228,17 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    display: block;
+    display: contents;
     margin-top: 40px;
     padding: 0.5rem;
-    border: #F2F20D;
+    border: #ac9659;
    }
+.job-11 .sm-heading {
+  color: #eaf0c9;
+}
+.job-11 .job-heading {
+  color: #ac9659;
+}
 
 .projects {
   display: grid;
@@ -198,7 +249,7 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #eece1a;
+      border-color: #ac9659;
       transition: all 0.5s ease-out; }
 
 .boxes {
@@ -215,13 +266,13 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #eece1a;
-      color: #000; }
+      background: #ac9659;
+      color: #ffffff; }
       .boxes div:hover span {
         color: #000; }
 
 .sm-heading{
-  margin-top: 50px;
+  margin-top: -5px;
 }
 
 
@@ -231,7 +282,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
+    background: #ac9659;
     color: #000; }
 
 .btn-dark {
@@ -280,9 +331,11 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("../img/Jani_small.jpg");
-      width: 150px;
-      height: 150px; }
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: solid 0px
+    }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
