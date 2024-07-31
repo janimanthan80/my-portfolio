@@ -207,7 +207,7 @@ main {
   grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
-    background: URL("../img/My picopy.jpg");
+    background: URL("img/_MG_3590.jpg");
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
