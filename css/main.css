@@ -129,7 +129,7 @@ body {
   font-style: normal;
   line-height: 2; }
   body#bg-img {
-    background: url("img/_MG_3590.jpg");
+    background: url("img/_MG_3590.png");
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
